@@ -1,0 +1,297 @@
+/*generales*/ç
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/*Menu*/
+
+#Menu li > a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #3f3f3f;
+}
+
+#Menu form > button {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Carrusel de Imagenes*/
+
+.carousel-inner {
+    max-height: 39rem;
+}
+
+/*Media Queries Pantalla Pequeña*/
+@media (max-width:768px) {
+    #intro {
+        width: 90% i !important;
+    }
+    .servicio-fila{
+        width: 100% !important;
+        text-align: center;
+    }
+    .formulario{
+        width: 100% !important;
+        text-align: center;
+    }
+    .info{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+/*Media Queries Pantalla Extra SM*/
+
+@media(max-width: 576px) {
+     .icono-wrap{
+         flex-wrap: wrap;
+         justify-content: center !important;
+     }
+
+} 
+
+/*Footer*/ 
+
+footer{
+    background: darkslategray;
+    min-height: 100px;
+}
+
+footer p {
+    color: #f3f3f3;
+    text-align: center;
+}
+
+#iconos i {
+    font-size: 26px;
+    padding: 0 5px;
+    color: #f3f3f3;
+}
+
+
+/*galeria*/
+
+.galeria{
+    font-family: 'open sans';
+}
+
+.galeria h1{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+}
+
+.linea{
+    border-top: 5px solid #0077C0;
+    margin-bottom: 40px;
+}
+
+.contenedor-imagenes{
+    display:flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius:3px;
+}
+
+.contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height:250px;
+    margin-bottom:5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75)
+}
+.imagen img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background:rgba(0, 118, 192, 0.781) ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size:30px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height:100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size:22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+
+/*Formulario*/
+
+@media (max-width:480px) {
+    .contenedor{
+        width: 100%;
+    }
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    background: #fff;
+    padding: 40px;
+    margin: 20px auto;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.contenedor h1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.contenido{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contenido .info,
+.contenido .formulario{
+width: 50%;
+}
+
+
+/*estilos formulario*/
+
+.formulario{
+    padding-left: 10px;
+}
+
+.formulario input[type='text'],
+.formulario input[type='email'],
+.formulario input[type='date']{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    border: 1px solid #999;
+    color: #999;
+    font-family: 'Open Sans' ,sans-serif;
+    font-weight: 400;
+    outline: 0;
+}
+
+
+.formulario input[type='text']:focus,
+.formulario input[type='email']:focus,
+.formulario input[type='date']:focus{
+    border: 1px solid darkslategray;
+}
+
+.formulario input[type='submit']{
+    padding: 12px 30px;
+    border: transparent;
+    background: darkslategray;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+}
+
+
+
+.tituloapi{
+    text-align: center;
+    margin:20px 0 15px 0;
+    font-weight: 300;
+}
+
+
+/*Tabla*/
+
+.container-table{
+    text-align: center;
+    justify-content: center;
+
+}
+
+.table{
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+    width: 103%;
+}
+
+th{
+    border: solid 2x black;
+    justify-content: center;
+    padding: 20px;
+}
+
+thead{
+    background-color: darkslategrey;
+    border-bottom: solid 5px;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+.solicitud button {
+    padding: 12px 30px;
+    border: transparent;
+    background: darkslategray;
+    color: #fff;
+}

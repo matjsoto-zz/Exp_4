@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--ejemplo conexion hoja de estilo-->
+    {% load static %}
+  <link rel="stylesheet" href="{%static 'css/estilos.css'%}">
+
+</head>
+<body>
+ <!--Encabezado-->
+ <header class="container-fluid bg-dark d-flex justify-content-center">
+    <p class="text-light mb-0 p-2 fs-6">Contactanos +56 9 8765 4321</p>
+</header>
+   
+   <!--NavBar-->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <span class="text-dark fs-5 fw-bold">CAOS NEWS </span>
+        </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+          <!--Lista-->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Inicio</a>
+          
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'form_crear' %}">Registrarse</a>
+          
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'crud' %}">CRUD</a>
+          
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin">Administrador</a>
+          
+          </li>
+
+      </ul>
+  
+      </div>
+      </div>
+    </nav>
+
+  <div class="linea"></div>
+
+  <!--Servicios-->
+  
+  <section class="container-fluid">
+    <div class="row w-75 mx-auto  serviciofila">
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+        {%load static%}
+        <img src="{%static 'img/noticiaslocales.png'%}" alt=noticiaslocales
+        width="180" height="160">
+        <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1">Noticias Locales</h3>
+        <p class="px-4">Nuestra labor es informar de forma clara, con imparcialidad y oportunamente sobre los acontecimientos más relevantes a Nivel Local.</p>
+      </div>
+     </div>
+    
+    <!--servicio2-->
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+        {%load static%}
+      <img src="{%static 'img/deportivas.png'%}" alt=noticiasdeportivas
+      width="180" height="160">
+      <div>
+      <h3 class="fs-5 mt-4 px-4 pb-1">Noticias Deportivas</h3>
+      <p class="px-4">Nuestro objetivo es dar a conocer toda informacion veridica y clara sobre el deporte en el ambito nacional e internacional.</p>
+    </div>
+  </div>
+
+  <!--servicio3-->
+  <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+    {%load static%}
+    <img src="{%static 'img/politicas.png'%}" alt=noticiaspoliticas
+    width="180" height="160">
+    <div>
+    <h3 class="fs-5 mt-4 px-4 pb-1">Noticias Politicas</h3>
+    <p class="px-4">Nuestra labor se centra en dar a conocer la verdad sin apegos a colores políticos o a intereses específicos y buscamos respetar los distintos valores e 
+      ideologías que puedan estar presentes en la comunidad.
+    </p>
+  </div>
+ </div>
+
+<!--servicio4-->
+<div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+    {%load static%}
+  <img src="{%static 'img/internacionales.png'%}" alt=noticiasinternacionales
+  width="180" height="160">
+  <div>
+  <h3 class="fs-5 mt-4 px-4 pb-1">Noticias Internacionales</h3>
+  <p class="px-4">Nuestro objetivo es hacerle llegar a nuestros lectores, una Informacion Internacional lo mas clara, imparcial y rapida posible, asi ellos esten siempre informados
+    no solo a nivel local. </p>
+</div>
+</div>
+   </div>
+  </section>
+  
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+       
+     <!--Pie de Pagina (Footer)-->
+
+  <footer class="w-100 d-flex align-items-center justify-content-center flex-wrap">
+    <p class="fs-5 px-3 pt-3">CAOS NEWS - Matias Soto &copy; Derechos Reservados 2021</p>
+  </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
+
+    
